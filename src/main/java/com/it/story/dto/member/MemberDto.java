@@ -1,4 +1,4 @@
-package com.it.story.dto;
+package com.it.story.dto.member;
 
 import com.it.story.domain.Role;
 import lombok.Builder;
@@ -9,14 +9,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserDto {
+public class MemberDto {
     private Long id;
     private String email;
     private String password;
     private Role role;
 
     @Builder
-    public UserDto(Long id, String email, String password, Role role) {
+    public MemberDto(Long id, String email, String password, Role role) {
         this.id = id;
         this.email = email;
         this.password = password;
