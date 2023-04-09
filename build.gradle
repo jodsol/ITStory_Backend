@@ -12,6 +12,11 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+
+	// 내부 로깅 프레임워크(Logback)을 제외합니다.
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
 }
 
 repositories {
@@ -20,6 +25,9 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// logging
+	implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 
 	// docs
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.12'
